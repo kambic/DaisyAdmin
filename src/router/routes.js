@@ -1,5 +1,5 @@
 import HomeView from '@/views/HomeView.vue';
-
+import MediaView from "@/views/MediaView.vue";
 export default [
 	{
 		path: '/',
@@ -7,6 +7,12 @@ export default [
 		component: HomeView,
 		meta: { title: 'Home' },
 	},
+    {
+        path: '/media',
+        name: 'media',
+        component: MediaView,
+    },
+
 	{
 		path: '/preview',
 		name: 'componentsPreview',

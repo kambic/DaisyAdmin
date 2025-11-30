@@ -29,11 +29,19 @@ const title = 'Template Preview';
 			<router-link :to="{ name: 'home' }" class="text-xl">{{ title }}</router-link>
 		</div>
 		<div class="inline-flex flex-none gap-x-2">
-			<router-link
+
+      <router-link
 				:to="{ name: 'home' }"
 				class="btn btn-ghost"
 				:class="{ 'btn-active': router.currentRoute.value.name === 'home' }"
 			>Home</router-link>
+
+
+      <router-link
+				:to="{ name: 'media' }"
+				class="btn btn-ghost"
+				:class="{ 'btn-active': router.currentRoute.value.name === 'media' }"
+			>Media</router-link>
 
 			<router-link
 				:to="{ name: 'componentsPreview' }"
