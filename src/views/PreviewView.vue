@@ -52,7 +52,7 @@ const components = [
 
 <template>
 	<div class="container-center">
-		<h1 class="text-center">Components Preview</h1>
+		<h1 class="text-center">Components Previewaa</h1>
 		<p class="text-center text-base text-base-content/70">Preview of the some components built with DaisyUI and Tailwind CSS.</p>
 		<p class="text-center text-base text-base-content/70 mb-16">You can find the source code in the <code><span class="icon">📁</span>src/components/ComponentsPreview</code> directory.</p>
 

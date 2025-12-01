@@ -11,6 +11,8 @@ export default [
         path: '/media',
         name: 'media',
         component: MediaView,
+		meta: { title: 'Media' },
+
     },
 
 	{
