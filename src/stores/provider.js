@@ -1,9 +1,9 @@
 import { defineStore } from "pinia";
 import { mande } from "mande";
 
-const api = mande("/api/v1/providers");
+const api = mande("/api/provider");
 
-export const useProviderStore = defineStore("providers", {
+export const useProviderStore = defineStore("provider", {
   state: () => ({
     items: [],
     loading: false,
@@ -26,6 +26,7 @@ export const useProviderStore = defineStore("providers", {
 
       try {
         const res = await api.get();
+
         this.items = res.results || [];
         console.log("Providers loaded:", this.items);
       } catch (err) {

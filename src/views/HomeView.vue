@@ -3,7 +3,7 @@ import TemplatePackages from "@/components/Home/TemplatePackages.vue";
 import ThemeController from "@/components/Home/ThemeController.vue";
 import ComponentsPreview from "@/components/Home/ComponentsPreview.vue";
 import Guide from "@/components/Home/Guide.vue";
-
+import FileManager from "@/components/FileManager.vue";
 const title = document.title;
 const currentHostname = window.location.hostname;
 const demoHostname = "tpl-vue3-tailwind4-daisyui5.brown.sk";
@@ -31,7 +31,7 @@ const githubRepo =
   <!-- Components Preview -->
   <div class="bg-base-300 text-base-content mb-10">
     <div class="container-center py-10">
-      <ComponentsPreview />
+      <FileManager />
     </div>
   </div>
 

@@ -9,7 +9,7 @@ import VideoJsPlayerView from "@/views/VideoJsPlayerView.vue";
 
 import ProviderList from "@/views/ProviderList.vue";
 import ProviderDetail from "@/views/ProviderDetail.vue";
-
+import JwtDecode from "@/views/JwtDecode.vue";
 export default [
   {
     path: "/",
@@ -17,11 +17,19 @@ export default [
     component: HomeView,
     meta: { title: "Home" },
   },
+
+  {
+    path: "/j",
+    name: "jwt-decode",
+    component: JwtDecode,
+  },
+
   {
     path: "/v",
     name: "tube-player",
     component: VideoJsPlayerView,
   },
+
   {
     path: "/providers",
     meta: { title: "Providers" },
@@ -52,6 +60,14 @@ export default [
     component: ChartDashboard,
     meta: { title: "Chart" },
   },
+
+  {
+    path: "/dash",
+    name: "dash",
+    component: DashDashboard,
+    meta: { title: "Dash" },
+  },
+
   {
     path: "/dash",
     name: "dash",
