@@ -350,7 +350,7 @@ const setupDashListeners = () => {
 
   // Stream initialized
   player.value.on(dashjs.MediaPlayer.events.STREAM_INITIALIZED, () => {
-    const bitrateList = player.value.getBitrateInfoListFor('video')
+    const bitrateList = player.value.bitrate
     availableQualities.value = bitrateList.map((item, index) => ({
       index,
       height: item.height,
