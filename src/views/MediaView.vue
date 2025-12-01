@@ -2,6 +2,8 @@
 import DashPlayer from "@/components/DashPlayer.vue";
 import BarChart from "@/components/BarChart.vue";
 import VerticalBarChart from "@/components/VerticalBarChart.vue";
+import HorizontalBarChart from "@/components/HorizontalBarChart.vue";
+import VercelChart from "@/components/VercelChart.vue";
 </script>
 
 <template>
@@ -9,7 +11,10 @@ import VerticalBarChart from "@/components/VerticalBarChart.vue";
   Media View
   <BarChart/>
   <VerticalBarChart/>
-  <DashPlayer/>
+  <HorizontalBarChart/>
+  <VercelChart/>
+  <VercelChart/>
+<!--  <DashPlayer/>-->
 </div>
 </template>
 
