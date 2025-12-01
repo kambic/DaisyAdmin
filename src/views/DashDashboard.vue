@@ -331,7 +331,7 @@ const loadStream = () => {
 }
 
 const setupDashListeners = () => {
-  if (!player.value) return
+  if (player.value) return
 
   // Quality change event
   player.value.on(dashjs.MediaPlayer.events.QUALITY_CHANGE_RENDERED, (e) => {
@@ -350,8 +350,11 @@ const setupDashListeners = () => {
 
   // Stream initialized
   player.value.on(dashjs.MediaPlayer.events.STREAM_INITIALIZED, () => {
-    const bitrateList = player.value.bitrate
-    availableQualities.value = bitrateList.map((item, index) => ({
+    const metrics = player.value.getDashMetrics()
+    const bitrateList = metrics?.getBitrateInfoListFor()
+
+    console.log(`[DASH] Available qualities:`)
+    availableQualities.value = bitrateList?.map((item, index) => ({
       index,
       height: item.height,
       bitrate: Math.round(item.bitrate / 1000)
