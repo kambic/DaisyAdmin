@@ -5,15 +5,12 @@ import TheHeader from "@/components/TheHeader.vue";
 </script>
 
 <template>
-	<TheHeader/>
+  <TheHeader />
 
-	<main class="py-8">
-		<router-view />
-	</main>
-
-	<TheFooter/>
+  <main class="py-8">
+    <router-view />
+  </main>
+  <TheFooter />
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

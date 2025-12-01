@@ -2,8 +2,8 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import tailwindcss from "@tailwindcss/vite";
-import vueDevTools from 'vite-plugin-vue-devtools'
-// https://vite.dev/config/
+import vueDevTools from "vite-plugin-vue-devtools";
+
 export default defineConfig(({ mode }) => ({
   base: process.env.BASE_URL,
   plugins: [vue(), vueDevTools(), tailwindcss()],
@@ -17,5 +17,14 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     sourcemap: true,
+  },
+  // This is what the proxy block looks like based on your previous messages
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8000",
+        changeOrigin: true,
+      },
+    },
   },
 }));
