@@ -1,6 +1,7 @@
 import HomeView from '@/views/HomeView.vue';
 import MediaView from "@/views/MediaView.vue";
 import ChartDashboard from "@/views/ChartDashboard.vue";
+import DashDashboard from "@/views/DashDashboard.vue";
 export default [
 	{
 		path: '/',
@@ -16,6 +17,7 @@ export default [
 
     },
     {path: '/chart', name: 'chart', component: ChartDashboard, meta: { title: 'Chart' }},
+    {path: '/dash', name: 'dash', component: DashDashboard, meta: { title: 'Dash' }},
 
 	{
 		path: '/preview',
